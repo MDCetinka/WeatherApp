@@ -30,9 +30,12 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.paint
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.example.weatherapp.ui.theme.BlueJC
+import com.example.weatherapp.ui.theme.DarkBlueJC
 
 
 class MainActivity : ComponentActivity() {
@@ -76,6 +79,11 @@ fun WeatherScreen() {
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(30.dp),
                 colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.White,
+                    unfocusedContainerColor = Color.White,
+                    focusedIndicatorColor = BlueJC,
+                    unfocusedIndicatorColor = BlueJC,
+                    focusedLabelColor = DarkBlueJC,
 
                 )
                 )
