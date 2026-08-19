@@ -22,6 +22,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.weatherapp.ui.theme.WeatherAppTheme
 import com.example.weatherapp.ui.theme.WeatherViewModel
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.paint
 import androidx.compose.ui.layout.ContentScale
@@ -61,8 +67,18 @@ fun WeatherScreen() {
         Column(modifier = Modifier.fillMaxSize()
             .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Top){
+            verticalArrangement = Arrangement.Top
+        ) {
+                Spacer(modifier = Modifier.height(180.dp))
+                OutlinedTextField(value = city,
+                onValueChange = {city = it},
+                label = {Text("City")},
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(30.dp),
+                colors = TextFieldDefaults.colors(
 
+                )
+                )
         }
     }
 
