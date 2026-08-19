@@ -27,7 +27,7 @@ interface WeatherApi {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL)
-                .build()
+                .build() //Json format convert
             return retrofit.create(WeatherApi::class.java)
         }
 
