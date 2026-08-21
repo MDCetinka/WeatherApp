@@ -55,6 +55,10 @@ class MainActivity : ComponentActivity() {
 fun WeatherScreen() {
     val viewModel: WeatherViewModel = viewModel()
     val weatherData by viewModel.weatherData.collectAsState()
+    //StateFlow dinle, obje her değiştiğinde haber et
+//By == property delegate, objeyi değişken gibi kullanıyorsun
+
+
     var city by remember {
         mutableStateOf("")
     }
