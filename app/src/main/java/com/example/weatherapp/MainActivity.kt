@@ -59,9 +59,10 @@ fun WeatherScreen() {
 //By == property delegate, objeyi değişken gibi kullanıyorsun
 
 
-    var city by remember {
-        mutableStateOf("")
-    }
+    var city by remember { mutableStateOf("") }
+    //ullanıcı her harf girdiğinde ekran kendini günceller.
+    // remember olmazsa, arayüz her güncellendiğinde değişken sıfırlanır ve
+    // yazdığın harfler anında silinir.
     val apiKey = "123456789"
 
 
