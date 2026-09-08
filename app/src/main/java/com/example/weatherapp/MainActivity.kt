@@ -63,7 +63,7 @@ fun WeatherScreen() {
     //ullanıcı her harf girdiğinde ekran kendini günceller.
     // remember olmazsa, arayüz her güncellendiğinde değişken sıfırlanır ve
     // yazdığın harfler anında silinir.
-    val apiKey = "123456789"
+    val apiKey = "1234567890"
 
 
     Box(
